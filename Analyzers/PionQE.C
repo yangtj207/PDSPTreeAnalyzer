@@ -202,12 +202,12 @@ void PionQE::FillQEPlots(TString beam_selec_str){
 void PionQE::FillQERecoPlots(TString beam_selec_str, double weight){
 
   if (pi_type == pi2::kPiQE){
-    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_Q2", QE_Q2, recoQE_Q2, 1.0, 20, 0., 0.6,20,0.,0.6);
-    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_KEPi0", QE_KEPi0, recoQE_KEPi0, 1.0, 20, 0., 500., 20, 0., 500.);
-    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_KEPi1", QE_KEPi1, recoQE_KEPi1, 1.0, 20, 0., 500., 20, 0., 500.);
-    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_AngPi", QE_AngPi, recoQE_AngPi, 1.0, 20, 0., 180., 20, 0., 180.);
-    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_nu", QE_nu, recoQE_nu, 1.0, 20, 0., 500., 20, 0., 500.);
-    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_EQE", QE_EQE, recoQE_EQE, 1.0, 20, 0., 700., 20, 0., 700.);
+    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_Q2", QE_Q2, recoQE_Q2, weight, 20, 0., 0.6,20,0.,0.6);
+    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_KEPi0", QE_KEPi0, recoQE_KEPi0, weight, 20, 0., 500., 20, 0., 500.);
+    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_KEPi1", QE_KEPi1, recoQE_KEPi1, weight, 20, 0., 500., 20, 0., 500.);
+    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_AngPi", QE_AngPi, recoQE_AngPi, weight, 20, 0., 180., 20, 0., 180.);
+    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_nu", QE_nu, recoQE_nu, weight, 20, 0., 500., 20, 0., 500.);
+    JSFillHist(beam_selec_str, beam_selec_str + "_QE2D_EQE", QE_EQE, recoQE_EQE, weight, 20, 0., 700., 20, 0., 700.);
   }
   JSFillHist(beam_selec_str, beam_selec_str + "_QEreco_Q2_" + pi_type_str, recoQE_Q2, weight, 20., 0., 1.);
   JSFillHist(beam_selec_str, beam_selec_str + "_QEreco_KEPi0_" + pi_type_str, recoQE_KEPi0, weight, 20., 0., 500.);
